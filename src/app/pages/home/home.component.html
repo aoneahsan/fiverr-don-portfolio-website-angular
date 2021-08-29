@@ -1,0 +1,132 @@
+<!-- **************************************************************** -->
+<!-- Section 1 - App Header -->
+<!-- **************************************************************** -->
+<app-header></app-header>
+<!-- **************************************************************** -->
+<!-- Section 2 - User Image Section - Hero Section -->
+<!-- **************************************************************** -->
+<div id="section-2" class="hero-banner"></div>
+<!-- **************************************************************** -->
+<!-- Section 3 - User Info Section -->
+<div id="section-3" class="info-con">
+  <div class="container">
+    <div class="info-content">
+      <p class="mb-20 text-white body-font" [@bounce]="bounce">
+        ☝🏼 That's me, a (UX/UI) Product Designer from the Netherlands, adapting
+        to a promadic travel lifestyle. Specializing in data-viz, onboarding
+        flows, and SaaS products, I wander between the creative and the
+        analytical.
+      </p>
+      <p
+        class="mb-20 text-white body-font"
+        animateOnScroll
+        animationName="animated fadeIn"
+      >
+        My work is propelled by a huge drive to creating impactful designs and
+        to designing the future. Over the past 10 years, I’ve been working
+        remotely with renowned creative agencies, SaaS companies, and tech
+        start-ups.
+      </p>
+      <p class="mb-20 text-white body-font">
+        My expertise lays in taking the lead in designing future-proof products,
+        optimising them, and scaling for growth; from product orientation to
+        design handoff. Most often, I operate in small, dynamic teams -
+        collaborating with product managers and engineering teams.
+      </p>
+      <p class="mb-20 text-white body-font">
+        Excited to start designing the future together or just want to talk
+        shop?Say hi – hi@donouwens.com ✌🏼
+      </p>
+    </div>
+  </div>
+</div>
+<!-- **************************************************************** -->
+<!-- Section 4 - Text Images Section -->
+<!-- **************************************************************** -->
+<div id="section-4" class="text-imgs-con">
+  <div class="text-img-1"></div>
+  <div class="text-img-2"></div>
+</div>
+<!-- **************************************************************** -->
+<!-- Section 5 - Footer Section -->
+<!-- **************************************************************** -->
+<div id="section-5" class="projects-con">
+  <div class="container">
+    <div class="mb-100 projects-section-heading">
+      <h2 class="text-white uppercase">Coming in hot</h2>
+    </div>
+    <!-- project con with media on left side -->
+    <div
+      class="project-con mb-65"
+      [ngClass]="{ 'flex-row-reverse': i % 2 !== 0 }"
+      animateOnScroll
+      animationName="animated fadeIn"
+      *ngFor="let project of projects; let i = index"
+    >
+      <div class="project-media-con">
+        <div class="project-media-inner" [ngClass]="{ 'ml-auto': i % 2 !== 0 }">
+          <img
+            class="project-media"
+            [src]="'/assets/images/' + project.image"
+          />
+        </div>
+      </div>
+      <div class="pt-16 project-content-con">
+        <h3 class="text-white title uppercase">{{ project.title }}</h3>
+        <p class="text-white description">
+          {{ project.description }}
+        </p>
+        <ul class="text-white list" *ngIf="project.list.length > 0">
+          <li class="list-item" *ngFor="let productListItem of project.list">
+            // {{ productListItem }}
+          </li>
+        </ul>
+        <app-button
+          [text]="project.button.text"
+          [hoverText]="project.button.hoverText"
+          [btnStyle]="project.button.color"
+          [btnHoverStyle]="project.button.hoverColor"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- **************************************************************** -->
+<!-- Section 6 - Footer Section -->
+<!-- **************************************************************** -->
+<div id="section-6" class="working-locations-con">
+  <div class="container">
+    <h2 class="text-white working-locations-heading text-black mb-80">
+      WORKING REMOTELY FROM
+    </h2>
+    <div class="working-locations">
+      <div class="location">
+        <img src="/assets/images/hr.svg" class="icon" />
+        <p class="name">Rijeka, Croatia</p>
+        <p class="date">2019</p>
+      </div>
+      <div class="location">
+        <img src="/assets/images/cl.svg" class="icon" />
+        <p class="name">Santiago, Chile</p>
+        <p class="date">2019</p>
+      </div>
+      <div class="location">
+        <img src="/assets/images/us.svg" class="icon" />
+        <p class="name">Chicago, USA</p>
+        <p class="date">2020</p>
+      </div>
+      <div class="location">
+        <img src="/assets/images/lt.svg" class="icon" />
+        <p class="name">Vilnius, Lithuania</p>
+        <p class="date">2021</p>
+      </div>
+    </div>
+    <div class="working-info text-center mt-60">
+      <a href="">more on my promadic traveler lifestyle</a>
+    </div>
+  </div>
+</div>
+<!-- **************************************************************** -->
+<!-- Section 10 - Footer Section -->
+<!-- **************************************************************** -->
+<app-footer></app-footer>

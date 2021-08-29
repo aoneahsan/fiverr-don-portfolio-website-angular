@@ -1,0 +1,108 @@
+.button {
+  padding: 10px 20px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  width: fit-content;
+  display: flex;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+
+  &.button-white,
+  &.button-yellow {
+    color: #fff;
+
+    & .button-icon.icon-black,
+    & .button-icon.icon-yellow {
+      display: none;
+    }
+
+    &:hover {
+      & .button-icon {
+        &.icon-black {
+          display: block;
+        }
+        &.icon-yellow {
+          display: none;
+        }
+        &.icon-white {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.button-yellow {
+    color: #d2ff01;
+
+    & .button-icon {
+      &.icon-black {
+        display: none;
+      }
+      &.icon-yellow {
+        display: block;
+      }
+      &.icon-white {
+        display: none;
+      }
+    }
+
+    &:hover .button-icon {
+      &.icon-black {
+        display: block;
+      }
+      &.icon-yellow {
+        display: none;
+      }
+    }
+  }
+
+  &.button-hover-yellow:hover {
+    color: #232323;
+    background: #d2ff01;
+    border-color: #d2ff01;
+  }
+
+  &.button-hover-pink:hover {
+    color: #fff;
+    background: #d368db;
+    border-color: #d368db;
+
+    & .button-icon {
+      &.icon-black {
+        display: none;
+      }
+      &.icon-white {
+        display: block;
+      }
+    }
+  }
+
+  & .button-text {
+    font-family: "visbycf-bold";
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 8px;
+
+    &.normal {
+      display: inline-block;
+    }
+
+    &.hover {
+      display: none;
+    }
+  }
+
+  &:hover .button-text {
+    &.normal {
+      display: none;
+    }
+
+    &.hover {
+      display: inline-block;
+    }
+  }
+}

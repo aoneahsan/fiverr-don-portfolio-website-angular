@@ -1,1 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./normalized.scss";
+@import "./fonts.scss";
+
+// Generic Styling
+body,
+html {
+  background: linear-gradient(180deg, #160133 0%, #160033 100%);
+  padding: 0;
+  font-family: "visbycf-medium";
+}
+
+a {
+  text-decoration: none;
+}
+
+// Generic Classes
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.body-font {
+  font-family: "visbycf-medium";
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+}
+.text-white {
+  color: #fff;
+}
+.text-danger {
+  color: red;
+}
+.text-success {
+  color: green;
+}
+.text-black {
+  color: #000;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+$spaceamounts: (
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16,
+  20,
+  25,
+  26,
+  30,
+  35,
+  40,
+  45,
+  50,
+  55,
+  60,
+  65,
+  70,
+  75,
+  80,
+  85,
+  90,
+  95,
+  100
+);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}

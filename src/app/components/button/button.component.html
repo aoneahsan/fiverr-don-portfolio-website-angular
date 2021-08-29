@@ -1,0 +1,24 @@
+<div
+  class="button"
+  [ngClass]="{
+    'button-white': btnStyle === 'white',
+    'button-yellow': btnStyle === 'yellow',
+    'button-hover-yellow': btnHoverStyle === 'yellow',
+    'button-hover-pink': btnHoverStyle === 'pink'
+  }"
+>
+  <span class="button-text normal">{{ text }}</span>
+  <span class="button-text hover">{{ hoverText }}</span>
+  <img
+    src="/assets/images/forward-arrow-black.svg"
+    class="button-icon icon-black"
+  />
+  <img
+    src="/assets/images/forward-arrow-white.svg"
+    class="button-icon icon-white"
+  />
+  <img
+    src="/assets/images/forward-arrow-yellow.svg"
+    class="button-icon icon-yellow"
+  />
+</div>
