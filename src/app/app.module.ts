@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { CookieModule } from 'ngx-cookie';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { CookieModule } from 'ngx-cookie';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AnimateOnScrollModule.forRoot(),
     CookieModule.forRoot(),
   ],
   providers: [],
