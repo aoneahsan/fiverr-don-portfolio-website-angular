@@ -86,3 +86,20 @@ footer {
     }
   }
 }
+
+// Responsive CSS
+@media all and (max-width: 767px) {
+  footer {
+    & .contact-details {
+      & .email {
+        font-size: 24px;
+      }
+    }
+  }
+  .copyrights {
+    & .copyright-content {
+      flex-direction: column;
+      padding-bottom: 16px;
+    }
+  }
+}

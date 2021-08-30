@@ -106,3 +106,15 @@
     }
   }
 }
+
+//  Responsive CSs
+@media all and (max-width: 500px) {
+  .button {
+    padding: 4px 12px;
+
+    & .button-text {
+      font-size: 14px;
+      margin-right: 4px;
+    }
+  }
+}

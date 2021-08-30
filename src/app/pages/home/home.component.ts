@@ -1,65 +1,11 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-  useAnimation,
-} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { bounce, fadeInUp } from 'ng-animate';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [
-    trigger('bounce', [
-      transition(
-        '* => *',
-        useAnimation(bounce, {
-          // Set the duration to 5seconds and delay to 2seconds
-          params: { timing: 1 },
-        })
-      ),
-    ]),
-    trigger('fadeInUp', [
-      transition(
-        '* => *',
-        useAnimation(fadeInUp, {
-          // Set the duration to 5seconds and delay to 2seconds
-          params: { timing: 1 },
-        })
-      ),
-    ]),
-    trigger('openClose', [
-      // ...
-      state(
-        'open',
-        style({
-          height: '200px',
-          opacity: 1,
-          backgroundColor: 'yellow',
-        })
-      ),
-      state(
-        'closed',
-        style({
-          transform: '',
-          opacity: 0,
-          backgroundColor: '#c6ecff',
-        })
-      ),
-      transition('open => closed', [animate('1s')]),
-      transition('closed => open', [animate('0.5s')]),
-    ]),
-  ],
 })
 export class HomeComponent implements OnInit {
-  // animations declarations
-  bounce: any;
-  fadeInUp: any;
-
   projects: {
     title: string;
     description: string;

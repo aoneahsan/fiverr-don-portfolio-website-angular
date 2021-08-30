@@ -1,8 +1,61 @@
 <header>
-  <div class="header-content-con">
+  <div class="container mx-auto">
     <div class="header-content">
-      <div class="container mx-auto">
-        <div class="header-top-bar"></div>
+      <div class="header-top-bar">
+        <div class="header-img-con">
+          <img
+            class="header-img normal"
+            src="/assets/images/header-text-image.svg"
+          />
+          <img
+            class="header-img hover"
+            src="/assets/images/header-text-image-hover.svg"
+          />
+        </div>
+        <div class="cookies-info-con" *ngIf="showCookieNotification">
+          <img
+            class="cookies-close-img"
+            src="/assets/images/close-icon.svg"
+            (click)="closeCookieNotificationAlert()"
+          />
+          <div class="cookies-info text-white text-right">
+            <p>The site uses 🍪</p>
+            <p>
+              You can read how they’re being used
+              <a href="" class="text-white">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="user-info"
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-duration="500"
+        data-aos-offset="0"
+      >
+        <div class="user-info-content">
+          <h1 class="name text-white animated flip">Don M. Ouwens</h1>
+          <p class="description text-white">
+            Detail-and user-oriented UX/UI’er specialising in designing the
+            future.
+          </p>
+        </div>
+        <div class="cta-btns-con">
+          <app-button
+            text="view work"
+            hoverText="view work"
+            btnStyle="yellow"
+            btnHoverStyle="yellow"
+          ></app-button>
+          <app-button
+            text="view work"
+            hoverText="view work"
+            btnStyle="white"
+            btnHoverStyle="pink"
+          ></app-button>
+        </div>
       </div>
     </div>
   </div>
